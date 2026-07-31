@@ -1,0 +1,13 @@
+{
+  "name": "interactive-video-engine",
+  "version": "0.1.0",
+  "private": true,
+  "description": "互动影游可视化编辑系统",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
