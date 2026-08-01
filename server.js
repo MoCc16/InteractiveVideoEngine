@@ -9,14 +9,14 @@ const ROOT = __dirname;
 const DATA_DIR = path.join(ROOT, 'data');
 const UPLOAD_DIR = path.join(ROOT, 'uploads');
 const STATE_FILE = path.join(DATA_DIR, 'project-state.json');
-const MIME = {'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.png':'image/png','.jpg':'image/jpeg','.jpeg':'image/jpeg','.mp4':'video/mp4','.mp3':'audio/mpeg','.webm':'video/webm','.webp':'image/webp','.vtt':'text/vtt; charset=utf-8','.srt':'text/plain; charset=utf-8'};
+const MIME = {'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.png':'image/png','.jpg':'image/jpeg','.jpeg':'image/jpeg','.gif':'image/gif','.mp4':'video/mp4','.webm':'video/webm','.mov':'video/quicktime','.mkv':'video/x-matroska','.webp':'image/webp'};
 
 async function ensureStorage() { await fsp.mkdir(DATA_DIR, {recursive:true}); await fsp.mkdir(UPLOAD_DIR, {recursive:true}); }
 async function readState() { try { return JSON.parse(await fsp.readFile(STATE_FILE, 'utf8')); } catch { return null; } }
 async function writeState(state) { await fsp.writeFile(STATE_FILE, JSON.stringify(state, null, 2), 'utf8'); }
 function send(res, status, body, type='application/json; charset=utf-8') { res.writeHead(status, {'Content-Type':type, 'Cache-Control':'no-store'}); res.end(typeof body === 'string' || Buffer.isBuffer(body) ? body : JSON.stringify(body)); }
 function safePath(urlPath) { const resolved = path.resolve(ROOT, '.' + urlPath); return resolved.startsWith(ROOT) ? resolved : null; }
-function resourceKind(mime, name) { if (mime.startsWith('video/') || /\.(mp4|webm|mov|mkv)$/i.test(name)) return 'video'; if (mime.startsWith('image/') || /\.(png|jpe?g|webp|gif)$/i.test(name)) return 'image'; if (mime.startsWith('audio/') || /\.(mp3|wav|ogg)$/i.test(name)) return 'audio'; return 'subtitle'; }
+function resourceKind(mime, name) { if (mime.startsWith('video/') || /\.(mp4|webm|mov|mkv)$/i.test(name)) return 'video'; if (mime.startsWith('image/') || /\.(png|jpe?g|webp|gif)$/i.test(name)) return 'image'; return null; }
 function parseMultipart(buffer, boundary) {
   const marker = Buffer.from(`--${boundary}`); const parts = []; let start = buffer.indexOf(marker) + marker.length + 2;
   while (start > marker.length) { const end = buffer.indexOf(marker, start); if (end === -1) break; const part = buffer.subarray(start, end - 2); const split = part.indexOf(Buffer.from('\r\n\r\n')); if (split !== -1) { const headers = part.subarray(0, split).toString('utf8'); const content = part.subarray(split + 4); const name = /name="([^"]+)"/.exec(headers)?.[1]; const filename = /filename="([^"]*)"/.exec(headers)?.[1]; const type = /Content-Type:\s*([^\r\n]+)/i.exec(headers)?.[1] || 'application/octet-stream'; parts.push({name, filename, type, content}); } start = end + marker.length + 2; }
@@ -30,8 +30,8 @@ async function handleApi(req, res, url) {
   if (req.method === 'POST' && url.pathname === '/api/assets') {
     const match = /boundary=([^;]+)/i.exec(req.headers['content-type'] || ''); if (!match) return send(res, 400, {error:'请使用 multipart/form-data 上传'});
     const file = parseMultipart(await body(req), match[1])[0]; if (!file?.filename) return send(res, 400, {error:'未找到文件'});
-    const clean = path.basename(file.filename).replace(/[^\w.\-\u4e00-\u9fff]/g, '_'); const storedName = `${crypto.randomUUID()}-${clean}`; await fsp.writeFile(path.join(UPLOAD_DIR, storedName), file.content);
-    return send(res, 201, {id:`r-${crypto.randomUUID()}`, name:clean, kind:resourceKind(file.type, clean), info:(file.content.length / 1024 / 1024).toFixed(1) + ' MB', used:'未绑定', url:`/uploads/${encodeURIComponent(storedName)}`});
+    const clean = path.basename(file.filename).replace(/[^\w.\-\u4e00-\u9fff]/g, '_'); const kind = resourceKind(file.type, clean); if (!kind) return send(res, 415, {error:'仅支持上传图片或视频资源'}); const storedName = `${crypto.randomUUID()}-${clean}`; await fsp.writeFile(path.join(UPLOAD_DIR, storedName), file.content);
+    return send(res, 201, {id:`r-${crypto.randomUUID()}`, name:clean, kind, info:(file.content.length / 1024 / 1024).toFixed(1) + ' MB', used:'未绑定', url:`/uploads/${encodeURIComponent(storedName)}`});
   }
   if (req.method === 'DELETE' && url.pathname.startsWith('/api/assets/')) { const storedName = path.basename(decodeURIComponent(url.pathname.slice('/api/assets/'.length))); if (storedName && storedName !== '.') { await fsp.unlink(path.join(UPLOAD_DIR, storedName)).catch(()=>{}); } return send(res, 200, {ok:true}); }
   return send(res, 404, {error:'API 不存在'});
