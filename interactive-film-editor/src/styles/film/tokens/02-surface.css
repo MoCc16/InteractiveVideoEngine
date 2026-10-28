@@ -1,0 +1,82 @@
+/*
+ * 表面 / 文字 / 边框 / 强调色（V0：取自目标产品 :root 与背景色频次）
+ * 目标产品的层次不是"深浅灰"，而是**在 #141414 底上叠半透明白**：08/0a/0d/0f/12/14/1a。
+ */
+:root {
+  --film-surface-base: #141414;
+  --film-surface-base-soft: #101012;
+  --film-surface-1: #ffffff08; /* 抬升面 */
+  --film-surface-2: #ffffff0f; /* 控件面 */
+  --film-surface-3: #ffffff14; /* 悬停面 */
+  --film-surface-glass: rgba(20, 20, 20, 0.72);
+
+  --film-text-1: #ffffffeb;
+  --film-text-2: #fff9;
+  --film-text-3: #ffffff61;
+  --film-silver: #e8e9ee;
+  --film-silver-bright: #fff;
+  --film-silver-metal-hi: #f5f6f9;
+  --film-silver-metal-lo: #9aa0ae;
+
+  --film-edge-color: #ffffff24;
+  --film-edge: 1px solid var(--film-edge-color);
+  --film-edge-toplight: inset 0 1px 0 #ffffff38;
+
+  /* 金色系（目标产品 #c9a84c 用了 41 次） */
+  --film-accent: #c9a84c;
+  --film-accent-strong: #f0d060;
+  --film-accent-dim: #c9a84c59;
+
+  --film-warn: #b08d87;
+  --film-warn-text: #cf9a94;
+
+  /* 节点类型色（目标产品 --t-*） */
+  --film-type-start: #8aa4ab;
+  --film-type-scene: #b6b9c0;
+  --film-type-choice: #8b9aad;
+  --film-type-qte: #998fa8;
+  --film-type-auto: #b6b9c0;
+  --film-type-menu: #c0b8b0;
+  --film-type-settlement: #8aa4ab;
+  --film-type-chapterlist: #a9b0b6;
+  --film-type-storymap: #97a69f;
+  --film-type-neutral: #ffffff73;
+
+  /* 圆角：目标产品 999px 胶囊最常用，其次 8/10/9/12 */
+  --film-radius-xs: 4px;
+  --film-radius-sm: 6px;
+  --film-radius-md: 8px;
+  --film-radius-lg: 12px;
+  --film-radius-xl: 16px;
+  --film-radius-pill: 999px;
+
+  /* 间距（目标产品 padding 集中在 1px 7px / 7px 10px / 8px 10px / 8px 12px） */
+  --film-space-1: 2px;
+  --film-space-2: 4px;
+  --film-space-3: 6px;
+  --film-space-4: 8px;
+  --film-space-6: 12px;
+  --film-space-8: 16px;
+
+  /* 控件高度（目标产品 24/26/28/32/36） */
+  --film-control-xs: 22px;
+  --film-control-sm: 26px;
+  --film-control-md: 30px;
+  --film-control-lg: 34px;
+
+  --film-z-canvas: 1;
+  --film-z-panel: 10;
+  --film-z-overlay: 100;
+
+  /* 兼容旧命名 */
+  --film-surface-0: var(--film-surface-base);
+  --film-text-primary: var(--film-text-1);
+  --film-text-secondary: var(--film-text-2);
+  --film-text-disabled: var(--film-text-3);
+  --film-accent-gold: var(--film-accent);
+  --film-accent-gold-strong: var(--film-accent-strong);
+  --film-border-subtle: var(--film-edge-color);
+  --film-border-strong: #ffffff33;
+  --film-danger: #cf6a5a;
+  --film-success: #6fbf9b;
+}

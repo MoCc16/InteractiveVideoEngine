@@ -1,0 +1,6 @@
+/* film 域 token 入口：只允许在 tokens/ 下定义原始值（对齐 morph 的 raw-color 守卫） */
+@import "./tokens/01-typography.css";
+@import "./tokens/02-surface.css";
+@import "./tokens/03-shadow.css";
+@import "./tokens/04-motion.css";
+@import "./ui.css";

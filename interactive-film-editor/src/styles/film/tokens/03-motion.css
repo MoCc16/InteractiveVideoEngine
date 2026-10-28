@@ -1,0 +1,5 @@
+:root {
+  --film-duration-fast: 120ms;
+  --film-duration-base: 200ms;
+  --film-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+}

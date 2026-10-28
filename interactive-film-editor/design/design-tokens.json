@@ -1,0 +1,696 @@
+{
+  "source": {
+    "dir": "C:\\Users\\MoCc\\Desktop\\InteractiveVideoEngine\\_rea\\web\\assets",
+    "files": [
+      "dialogs-CNzSjgE2.css",
+      "fonts-DTHWorzA.css",
+      "ImportToEditorDialog-BD2bJUm0.css",
+      "index-BK_-ShHr.css",
+      "mobile-I3JDkG0m.css",
+      "muse-admryKDc.css",
+      "StudioPage-CrzSGszQ.css",
+      "VerseShell-39K1PuKn.css",
+      "VerseWorkspacePage-ub2B8Ijg.css"
+    ],
+    "mainCss": "index-BK_-ShHr.css",
+    "fontCss": "fonts-DTHWorzA.css",
+    "chars": 336320
+  },
+  "rootVariables": {
+    "--silver": "#e8e9ee",
+    "--silver-bright": "#fff",
+    "--silver-dim": "#e8e9ee59",
+    "--silver-metal-hi": "#f5f6f9",
+    "--silver-metal-lo": "#9aa0ae",
+    "--text-1": "#ffffffeb",
+    "--text-2": "#fff9",
+    "--text-3": "#ffffff61",
+    "--t-start": "#8aa4ab",
+    "--t-scene": "#b6b9c0",
+    "--t-choice": "#8b9aad",
+    "--t-qte": "#998fa8",
+    "--t-auto": "#b6b9c0",
+    "--t-menu": "#c0b8b0",
+    "--t-settlement": "#8aa4ab",
+    "--t-chapterList": "#a9b0b6",
+    "--t-storyMap": "#97a69f",
+    "--t-neutral": "#ffffff73",
+    "--warn": "#b08d87",
+    "--warn-text": "#cf9a94",
+    "--edge": "1px solid #ffffff24",
+    "--edge-toplight": "inset 0 1px 0 #ffffff38",
+    "--shadow-nav": "0 4px 24px #00000059",
+    "--shadow-float": "0 16px 48px #0000008c, 0 2px 8px #0000004d",
+    "--t-fast": ".12s ease",
+    "--t-base": ".2s cubic-bezier(.2, .8, .2, 1)",
+    "--t-spring": ".4s cubic-bezier(.34, 1.3, .4, 1)",
+    "--t-panel": ".3s cubic-bezier(.2, .8, .2, 1)",
+    "--displacement-scale": "60",
+    "--blur-amount": "2px",
+    "--saturation": "140%",
+    "--aberration": "1.5",
+    "--font-ui": "\"PingFang SC\", \"Microsoft YaHei\", system-ui, sans-serif",
+    "--font-mono": "\"SF Mono\", Consolas, monospace"
+  },
+  "colors": {
+    "hex": [
+      [
+        "#ffffff12",
+        33
+      ],
+      [
+        "#ffffff0f",
+        28
+      ],
+      [
+        "#ffffff14",
+        27
+      ],
+      [
+        "#ffffff08",
+        26
+      ],
+      [
+        "#ffffff0d",
+        25
+      ],
+      [
+        "#ffffff1a",
+        24
+      ],
+      [
+        "#ffffff0a",
+        22
+      ],
+      [
+        "#141414",
+        18
+      ],
+      [
+        "#ffffff06",
+        16
+      ],
+      [
+        "#ffffff1f",
+        13
+      ],
+      [
+        "#0a0a0a",
+        10
+      ],
+      [
+        "#00000059",
+        10
+      ],
+      [
+        "#ffffff17",
+        10
+      ],
+      [
+        "#ffffff0b",
+        9
+      ],
+      [
+        "#b08d8714",
+        8
+      ],
+      [
+        "#e8e9ee14",
+        7
+      ],
+      [
+        "#0000004d",
+        6
+      ],
+      [
+        "#ffffff05",
+        5
+      ],
+      [
+        "#e8e9ee0f",
+        5
+      ],
+      [
+        "#e8e9ee12",
+        4
+      ],
+      [
+        "#0003",
+        4
+      ],
+      [
+        "#b08d8712",
+        4
+      ],
+      [
+        "#e8e9ee1a",
+        4
+      ],
+      [
+        "#0006",
+        3
+      ],
+      [
+        "#b08d8717",
+        3
+      ],
+      [
+        "#ffffff0e",
+        3
+      ],
+      [
+        "#ffffff29",
+        3
+      ],
+      [
+        "#b08d8724",
+        3
+      ],
+      [
+        "#e8e9ee",
+        3
+      ],
+      [
+        "#ffffff2e",
+        3
+      ]
+    ],
+    "rgba": [],
+    "allHexUnique": 383
+  },
+  "fontSizes": [
+    [
+      "11px",
+      119
+    ],
+    [
+      "12px",
+      77
+    ],
+    [
+      "10px",
+      70
+    ],
+    [
+      "11.5px",
+      68
+    ],
+    [
+      "9.5px",
+      56
+    ],
+    [
+      "10.5px",
+      54
+    ],
+    [
+      "13px",
+      31
+    ],
+    [
+      "9px",
+      30
+    ],
+    [
+      "12.5px",
+      19
+    ],
+    [
+      "14px",
+      11
+    ],
+    [
+      "8.5px",
+      11
+    ],
+    [
+      "15px",
+      7
+    ],
+    [
+      "17px",
+      5
+    ],
+    [
+      "16px",
+      5
+    ],
+    [
+      "22px",
+      4
+    ],
+    [
+      "18px",
+      4
+    ],
+    [
+      "24px",
+      3
+    ],
+    [
+      "28px",
+      3
+    ],
+    [
+      "20px",
+      2
+    ],
+    [
+      "21px",
+      2
+    ]
+  ],
+  "radii": [
+    [
+      "999px",
+      107
+    ],
+    [
+      "8px",
+      53
+    ],
+    [
+      "50%",
+      48
+    ],
+    [
+      "10px",
+      39
+    ],
+    [
+      "9px",
+      30
+    ],
+    [
+      "12px",
+      19
+    ],
+    [
+      "6px",
+      18
+    ],
+    [
+      "7px",
+      17
+    ],
+    [
+      "14px",
+      15
+    ],
+    [
+      "16px",
+      10
+    ],
+    [
+      "4px",
+      9
+    ],
+    [
+      "11px",
+      7
+    ],
+    [
+      "3px",
+      6
+    ],
+    [
+      "5px",
+      6
+    ],
+    [
+      "2px",
+      2
+    ],
+    [
+      "20px",
+      2
+    ],
+    [
+      "1px",
+      2
+    ],
+    [
+      "0",
+      2
+    ],
+    [
+      "inherit",
+      1
+    ],
+    [
+      "0 8px 8px 0",
+      1
+    ]
+  ],
+  "controlHeights": [
+    [
+      "1px",
+      16
+    ],
+    [
+      "32px",
+      16
+    ],
+    [
+      "36px",
+      13
+    ],
+    [
+      "26px",
+      13
+    ],
+    [
+      "15px",
+      13
+    ],
+    [
+      "6px",
+      12
+    ],
+    [
+      "24px",
+      11
+    ],
+    [
+      "30px",
+      10
+    ],
+    [
+      "18px",
+      10
+    ],
+    [
+      "14px",
+      10
+    ],
+    [
+      "34px",
+      9
+    ],
+    [
+      "28px",
+      8
+    ],
+    [
+      "7px",
+      8
+    ],
+    [
+      "22px",
+      8
+    ],
+    [
+      "5px",
+      8
+    ],
+    [
+      "16px",
+      7
+    ],
+    [
+      "17px",
+      6
+    ],
+    [
+      "37px",
+      5
+    ],
+    [
+      "20px",
+      5
+    ],
+    [
+      "4px",
+      5
+    ]
+  ],
+  "paddings": [
+    [
+      "0",
+      41
+    ],
+    [
+      "1px 7px",
+      10
+    ],
+    [
+      "7px 10px",
+      10
+    ],
+    [
+      "8px 10px",
+      9
+    ],
+    [
+      "8px 12px",
+      8
+    ],
+    [
+      "10px 12px",
+      7
+    ],
+    [
+      "12px",
+      7
+    ],
+    [
+      "6px",
+      7
+    ],
+    [
+      "0 11px",
+      7
+    ],
+    [
+      "0 8px",
+      6
+    ],
+    [
+      "8px",
+      6
+    ],
+    [
+      "8px 11px",
+      6
+    ],
+    [
+      "1px 6px",
+      6
+    ],
+    [
+      "4px",
+      5
+    ],
+    [
+      "8px 14px",
+      5
+    ],
+    [
+      "9px 12px",
+      5
+    ],
+    [
+      "7px 0",
+      5
+    ],
+    [
+      "9px 11px",
+      5
+    ],
+    [
+      "3px",
+      5
+    ],
+    [
+      "2px 9px",
+      5
+    ]
+  ],
+  "glass": [
+    [
+      "var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,)",
+      6
+    ],
+    [
+      "blur(20px) saturate(1.2)",
+      4
+    ],
+    [
+      "blur(24px) saturate(1.4)",
+      4
+    ],
+    [
+      "blur(2px)",
+      2
+    ],
+    [
+      "blur(18px) saturate(1.2)",
+      2
+    ],
+    [
+      "blur(16px) saturate(1.35)",
+      2
+    ],
+    [
+      "blur(20px) saturate(1.4)",
+      2
+    ],
+    [
+      "blur(16px) saturate(1.4)",
+      2
+    ],
+    [
+      "blur(6px)",
+      2
+    ],
+    [
+      "blur(var(--blur-amount)) saturate(var(--saturation))",
+      2
+    ],
+    [
+      "var(--lq-filter) blur(var(--blur-amount)) saturate(var(--saturation))",
+      2
+    ]
+  ],
+  "shadows": [
+    [
+      "0 0 0 2px #dcdde466",
+      63
+    ],
+    [
+      "var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)",
+      10
+    ],
+    [
+      "var(--shadow-float)",
+      6
+    ],
+    [
+      "var(--edge-toplight)",
+      6
+    ],
+    [
+      "0 0 6px 1px currentColor",
+      5
+    ],
+    [
+      "inset 0 1px #ffffff29",
+      5
+    ],
+    [
+      "inset 0 1px #ffffff24",
+      5
+    ],
+    [
+      "0 0 6px 1px #e8e9eecc",
+      5
+    ],
+    [
+      "none",
+      4
+    ],
+    [
+      "var(--edge-toplight),0 0 0 2px #dcdde466",
+      4
+    ],
+    [
+      "inset 0 1px #ffffff1f",
+      3
+    ],
+    [
+      "inset 0 1px #ffffffbf,inset 0 -1px #16171c12,0 1px 2px #00000080",
+      3
+    ],
+    [
+      "inset 0 1px #ffffffbf,inset 0 -1px #16171c12,0 1px 2px #00000080,0 0 0 2px #dcdde466",
+      3
+    ],
+    [
+      "inset 0 0 0 1px #ffffff0f",
+      3
+    ],
+    [
+      "0 0 8px #e8e9ee80",
+      3
+    ],
+    [
+      "0 6px 18px -10px #000000e6",
+      3
+    ],
+    [
+      "var(--edge-toplight),0 0 12px #e8e9ee1f",
+      2
+    ],
+    [
+      "var(--edge-toplight),var(--shadow-float)",
+      2
+    ],
+    [
+      "0 0 8px #e8e9ee4d",
+      2
+    ],
+    [
+      "inset 0 1px #ffffff14",
+      2
+    ]
+  ],
+  "fonts": {
+    "faceCount": 2122,
+    "families": [
+      [
+        "var(--font-mono)",
+        127
+      ],
+      [
+        "inherit",
+        85
+      ],
+      [
+        "var(--font-ui)",
+        9
+      ],
+      [
+        "var(--font-body)",
+        7
+      ],
+      [
+        "SF Mono,Consolas,monospace",
+        4
+      ],
+      [
+        "PingFang SC,Microsoft YaHei,system-ui,sans-serif",
+        3
+      ],
+      [
+        "var(--font-sans)",
+        2
+      ],
+      [
+        "ui-monospace,SFMono-Regular,Menlo,monospace",
+        1
+      ],
+      [
+        "Noto Sans SC,system-ui,sans-serif",
+        1
+      ],
+      [
+        "var(--default-font-family,ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\")",
+        1
+      ],
+      [
+        "var(--default-mono-font-family,ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace)",
+        1
+      ],
+      [
+        "system-ui,-apple-system,Segoe UI,sans-serif",
+        1
+      ],
+      [
+        "var(--font-mono,ui-monospace, monospace)",
+        1
+      ]
+    ],
+    "embeddedBase64Faces": 107,
+    "remoteUrls": 2684
+  }
+}

@@ -1,3 +1,6 @@
 data/
 uploads/
 *.log
+# 逆向分析产物（截图/抓包/登录脚本，体积大且含凭据，不入库）
+_rea/
+.rea-chrome-profile*/

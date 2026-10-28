@@ -1,0 +1,11 @@
+/* 动效（V0：目标产品 --t-fast / --t-base / --t-spring / --t-panel） */
+:root {
+  --film-t-fast: 0.12s ease;
+  --film-t-base: 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+  --film-t-spring: 0.4s cubic-bezier(0.34, 1.3, 0.4, 1);
+  --film-t-panel: 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  --film-duration-fast: 120ms;
+  --film-duration-base: 200ms;
+  --film-ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
+}

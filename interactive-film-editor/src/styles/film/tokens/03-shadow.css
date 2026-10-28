@@ -1,0 +1,9 @@
+/* 阴影与玻璃（V0：目标产品 --shadow-nav / --shadow-float / backdrop-filter 配方） */
+:root {
+  --film-shadow-nav: 0 4px 24px #00000059;
+  --film-shadow-float: 0 16px 48px #0000008c, 0 2px 8px #0000004d;
+  --film-shadow-inset-top: inset 0 1px 0 #ffffff2e;
+  --film-blur-glass: blur(20px) saturate(1.2);
+  --film-blur-glass-strong: blur(24px) saturate(1.4);
+  --film-blur-soft: blur(16px) saturate(1.35);
+}

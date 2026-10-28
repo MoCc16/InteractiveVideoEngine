@@ -1,0 +1,40 @@
+/*
+ * 字体与字号（V0：取自目标产品实测）
+ * 目标产品字号极密：11px 出现 119 次、12px 77、10px 70、11.5px 68 —— 编辑器不是"大字号"界面。
+ * 字体栈来自目标 :root --font-ui / --font-mono，并补上它页面里实际使用的中文衬线/楷体族。
+ */
+:root {
+  --film-font-ui: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
+  --film-font-serif: "Noto Serif SC", "Songti SC", "SimSun", serif;
+  --film-font-kai: "LXGW WenKai Screen", "Kaiti SC", "STKaiti", "KaiTi", serif;
+  --film-font-mono: "SF Mono", Consolas, "JetBrains Mono", monospace;
+
+  /* 密度阶梯（目标产品实测 9~15px 为主） */
+  --film-text-9: 9px;
+  --film-text-10: 10px;
+  --film-text-11: 11px;
+  --film-text-12: 12px;
+  --film-text-13: 13px;
+  --film-text-14: 14px;
+  --film-text-16: 16px;
+  --film-text-20: 20px;
+  --film-text-24: 24px;
+
+  --film-leading-tight: 1.2;
+  --film-leading-normal: 1.45;
+  --film-leading-loose: 1.7;
+
+  --film-weight-regular: 400;
+  --film-weight-medium: 500;
+  --film-weight-semibold: 600;
+  --film-weight-bold: 700;
+
+  /* 兼容旧命名（组件里仍在用） */
+  --film-font-xs: var(--film-text-10);
+  --film-font-sm: var(--film-text-11);
+  --film-font-md: var(--film-text-12);
+  --film-font-lg: var(--film-text-14);
+  --film-font-xl: var(--film-text-20);
+  --film-font-2xl: var(--film-text-24);
+  --film-font-sans: var(--film-font-ui);
+}

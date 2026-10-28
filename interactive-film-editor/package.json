@@ -1,0 +1,43 @@
+{
+    "name":  "@oz36/interactive-film-editor",
+    "version":  "0.1.0",
+    "private":  true,
+    "type":  "module",
+    "engines":  {
+                    "node":  "\u003e=18.18.0",
+                    "npm":  "\u003e=9.0.0"
+                },
+    "scripts":  {
+                    "dev":  "next dev --turbopack -H 0.0.0.0",
+                    "build":  "next build",
+                    "start":  "next start -H 0.0.0.0",
+                    "lint":  "eslint",
+                    "typecheck":  "tsc --noEmit",
+                    "test":  "vitest run",
+                    "test:watch":  "vitest",
+                    "verify:static":  "npm run lint \u0026\u0026 npm run typecheck \u0026\u0026 npm test \u0026\u0026 npm run check:inline",
+                    "check:inline":  "node scripts/check-inline-primitives.mjs",
+                    "check:inline:strict":  "node scripts/check-inline-primitives.mjs --strict"
+                },
+    "dependencies":  {
+                         "immer":  "^10.1.1",
+                         "next":  "^15.5.7",
+                         "next-intl":  "^4.3.4",
+                         "react":  "^19.1.2",
+                         "react-dom":  "^19.1.2",
+                         "zod":  "^3.25.76",
+                         "zustand":  "^5.0.2"
+                     },
+    "devDependencies":  {
+                            "@tailwindcss/postcss":  "^4.3.3",
+                            "@types/node":  "^22.10.2",
+                            "@types/react":  "^19.0.2",
+                            "@types/react-dom":  "^19.0.2",
+                            "@vitejs/plugin-react":  "^4.3.4",
+                            "eslint":  "^9.17.0",
+                            "eslint-config-next":  "^15.5.7",
+                            "tailwindcss":  "^4.3.3",
+                            "typescript":  "^5.7.2",
+                            "vitest":  "^3.0.5"
+                        }
+}
